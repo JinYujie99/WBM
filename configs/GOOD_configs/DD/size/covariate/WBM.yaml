@@ -1,0 +1,21 @@
+includes:
+  - base.yaml
+pipeline: Pipeline
+model:
+  model_name: GCN_WBM
+  layered_feature: True
+  Katoms: 6
+  clf_hidden_dim: 64
+  clf_num_hidden: 1
+  clf_dropout: 0.0
+  learn_hbar: True
+  dropout_rate: 0.0
+  dim_hidden: 32
+ood:
+  ood_alg: WBM
+  ood_param: 0.05
+train:
+  max_epoch: 200
+  lr: 1e-3
+  mile_stones: [200]
+

@@ -1,0 +1,19 @@
+includes:
+  - base.yaml
+pipeline: Pipeline
+model:
+  model_name: vGIN_WBM
+  layered_feature: True
+  Katoms: 4
+  clf_hidden_dim: 64
+  clf_num_hidden: 2
+  clf_dropout: 0.0
+  learn_hbar: True
+ood:
+  ood_alg: MolWBM
+  ood_param: 0.1
+train:
+  max_epoch: 200
+  lr: 1e-3
+  mile_stones: [150]
+
